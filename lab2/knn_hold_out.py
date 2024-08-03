@@ -60,12 +60,12 @@ plt.plot([1], [precision * 100], label='Precision', marker='o')
 plt.plot([1], [recall * 100], label='Recall', marker='o')
 plt.plot([1], [f1 * 100], label='F1 Score', marker='o')
 
-plt.title("KNN Metrics")
+plt.title("KNN Metrics (Hold-out)")
 plt.xlabel("Iteration")
 plt.ylabel("Score (%)")
 plt.legend()
 plt.grid(True)
-plt.savefig("KNN_metrics.png")
+plt.savefig("KNN_metrics_hold_out.png")
 plt.show()
 
 
@@ -92,5 +92,5 @@ for i, j in itertools.product(range(conf_matrix.shape[0]), range(conf_matrix.sha
              color="white" if conf_matrix[i, j] > thresh else "black")
 
 plt.tight_layout()
-plt.savefig("KNN_confusion_matrix.png")
+plt.savefig("KNN_cm_hold_out.png")
 plt.show()
